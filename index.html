@@ -3,46 +3,332 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Components</title>
+    <title>Accessible Components: Hidden Dropdown Menu's</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
+            background-color: #f0f8ff;
+            color: #333;
         }
         
         h1 {
-            color: #333;
+            font-family: 'Bebas Neue', sans-serif;
+            color: #1a365d;
             text-align: center;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #90cdf4;
+            font-size: 3.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            color: #2c5282;
+            text-align: center;
+            line-height: 1.6;
             padding-bottom: 10px;
-            border-bottom: 2px solid #eee;
+            border-bottom: 2px solid #90cdf4;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
         
         .content-area {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 20px;
-            min-height: 400px;
+            background-color: #e6f7ff;
+            border: 1px solid #bee3f8;
+            border-radius: 8px;
+            padding: 25px;
             margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .content-area:hover {
+            transform: translateY(-5px);
         }
         
         .content-area p {
-            color: #666;
+            color: #4a5568;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+        
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            color: #2b6cb0;
+            border-left: 4px solid #3182ce;
+            padding-left: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .image-box {
+            flex: 0 0 48%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .image-box img {
+            max-width: 100%;
+            border: 2px solid #90cdf4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .image-caption {
+            margin-top: 10px;
+            font-weight: 500;
+            color: #2c5282;
+        }
+
+        @media (max-width: 768px) {
+            .image-box {
+                flex: 0 0 100%;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Project Components</h1>
+    <h1>Accessible Components: Dropdown Menu</h1>
     
     <div class="content-area">
-        <!-- Large area for body text -->
-        <p>This is the main content area where you can add your project component details. This space is designed to accommodate a large amount of text and information about your project.</p>
+        <div class="section-title">Background Information:</div>
+        <p>Dropdown menus are a commonly used user interfaces that conserve screen space by hidng a list of options until activated by the user. They serve as efficient navigation tools and allow users to access multiple options from a single control point without cluttering the interface. When implemented effectively, dropdown menus improve site navigation. This website explores the accessibility of dropdown menus and how we can improve them.</p>
+    </div>
+    
+    <div class="content-area">
+        <div class="section-title">Three Example Components:</div>
+        <div class="image-container">
+            <div class="image-box" style="flex: 0 0 32%;">
+                <img src="uberimage.png" alt="Uber Dropdown Menu" style="width: 100%; height: auto;" />
+                <div class="image-caption">Example Uber Dropdown Menu</div>
+            </div>
+            <div class="image-box" style="flex: 0 0 32%;">
+                <img src="slackimage.png" alt="Slack Dropdown Menu" style="width: 100%; height: auto;" />
+                <div class="image-caption">Example Slack Dropdown Menu</div>
+            </div>
+            <div class="image-box" style="flex: 0 0 32%;">
+                <img src="mailimage.png" alt="Mail App Dropdown Menu" style="width: 100%; height: auto;" />
+                <div class="image-caption">Example Mail App Dropdown Menu</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-area">
+        <div class="section-title">Input Table:</div>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+            <tr>
+                <td style="border: 1px solid #90cdf4; padding: 10px; width: 25%; vertical-align: top;"><strong>Description</strong></td>
+                <td style="border: 1px solid #90cdf4; padding: 10px; width: 25%; vertical-align: top;"><strong>Uber Website</strong></td>
+                <td style="border: 1px solid #90cdf4; padding: 10px; width: 25%; vertical-align: top;"><strong>Slack</strong></td>
+                <td style="border: 1px solid #90cdf4; padding: 10px; width: 25%; vertical-align: top;"><strong>Mail App</strong></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #90cdf4; padding: 10px; vertical-align: top;"><strong>Mouse/Touchpad</strong></td>
+                <td style="border: 1px solid #90cdf4; padding: 10px; vertical-align: top;">This particular dropdown menu is relatively easy to navigate. When hovering over the "About" button, the background of the oval surrounding it lights up, highlighting that if clicked, this button will be selected. 
+
+Once clicked, a dropdown menu is released, giving us a menu of options to select. Additionally, the arrow to the right of the text flips from downwards to upwards, further signifying that the menu is being displayed. 
+
+Similar to the "About" button, when the mouse is hovering over a menu option, the background of that particular option is darkened, showing that if clicked that particular option would be selected. 
+
+In the case of the "Explore" menu option, when the mouse is hovering over this option, another submenu pops out to the right, giving way to even more choices.</td>
+                <td style="border: 1px solid #90cdf4; padding: 10px; vertical-align: top;">Slack's dropdown menu is very intuitive to navigate. When hovering over the button, the background of the button not only lights up, but the three dots grow bigger (further emphasizing that this button is being selected). Additionally, after a second of hovering, the hidden dropdown menu automatically pops out, bypassing the traditional step of having to click the actual button. This is phenomenal design as it is the perfect balance between convenience (not having to actually click the button if desired), while still having a seamless UI (accidentally scrolling over this button doesn't pop out the menu). 
+
+Once the hidden menu is shown, hovering with the mouse over particular buttons highlights the background. Additionally, once the mouse is moved away from the hidden menu, the hidden menu disappears.</td>
+                <td style="border: 1px solid #90cdf4; padding: 10px; vertical-align: top;">The Mail App's dropdown menu has a sleek design that is both intuitive but can be difficult to use. When hovering over the menu button, there is no indication it is being selected beyond the three sub buttons appearing. The lack of the button's background changing colors makes it a little less accessible. 
+
+Once the arrow button is clicked to show the dropdown menu, the arrow changes from pointing to the right to pointing downwards, which clearly shows the user the hidden menu is being displayed. 
+
+Once the hidden menu is displayed, the sub buttons additionally lack the same "hover to highlight" user experience that clearly shows which button is being displayed. It is only when a button is selected that the button's background is highlighted.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #90cdf4; padding: 10px; vertical-align: top;"><strong>Keyboard</strong></td>
+                <td style="border: 1px solid #90cdf4; padding: 10px; vertical-align: top;">When using the keyboard to navigate, the tab button is used to navigate between main buttons (ex: "Ride", "Drive", "Business", etc.). Once on the desired button, the enter key mimics what clicking on a button does, dropping down the hidden menu. From there, the arrow keys are used to navigate the submenu (ex: between "About us", "Our offerings", etc.), and the return key is used to select a part of the submit. 
+
+It is worth noting that when the submenu is dropped down, a blue box appears around the submenu, showing that it has been selected and the arrow keys will navigate this particular menu. 
+
+To leave this submenu and return to the main page to navigate to other areas of the website, the user can simply press the escape key and continue pressing the tab key to move to the next button (and shift+tab to return to the previous button).</td>
+                <td style="border: 1px solid #90cdf4; padding: 10px; vertical-align: top;">When using the keyboard to navigate, the arrow keys are used to move between buttons on the left side. Once a particular button is selected, a white box is created around the button that is highlighted. From there, the return key is used to select something. This is similar to clicking the touchpad. 
+
+Slack also has a unique feature that allows you to switch between workspaces using keyboard shortcuts. To move from workspace to workspace, the user can simply press the "command" key and then a particular number, which allows for seamless navigation.</td>
+                <td style="border: 1px solid #90cdf4; padding: 10px; vertical-align: top;">Using the keyboard to navigate the mail app is very difficult and not very intuitive. After playing around with various keys for 15 minutes, I was still unable to successfully open the hidden drop down menu. 
+
+Like most apps, the up and down arrow keys are used to navigate between apps (vertically), while the tab key interestingly is used for horizontal navigation between buttons. 
+
+This design is not particularly intuitive as it doesn't allow for clear navigation between the smaller buttons (ex: opening a submenu).</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #90cdf4; padding: 10px; vertical-align: top;"><strong>Touch (if available)</strong></td>
+                <td style="border: 1px solid #90cdf4; padding: 10px; vertical-align: top;"></td>
+                <td style="border: 1px solid #90cdf4; padding: 10px; vertical-align: top;"></td>
+                <td style="border: 1px solid #90cdf4; padding: 10px; vertical-align: top;">From a touch perspective, the mail app is very intuitive to use, likely because it was designed with the intention of being able to use it on a smartphone or iPad. Similar to using a mouse/trackpad, clicking the arrow opens a submenu, which allows for additional buttons to be clicked. It is worth noting that the background of these buttons only change color when physically selected. However, the panel slides to the left when selecting, hiding the menu itself.</td>
+            </tr>
+        </table>
+    </div>
+    <div class="content-area">
+        <div class="section-title">Output Table:</div>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+            <tr>
+                <td style="border: 1px solid #90cdf4; padding: 10px; width: 25%; vertical-align: top;"><strong>Outputs</strong></td>
+                <td style="border: 1px solid #90cdf4; padding: 10px; width: 25%; vertical-align: top;"><strong>Uber Website</strong></td>
+                <td style="border: 1px solid #90cdf4; padding: 10px; width: 25%; vertical-align: top;"><strong>Slack</strong></td>
+                <td style="border: 1px solid #90cdf4; padding: 10px; width: 25%; vertical-align: top;"><strong>Mail App</strong></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #90cdf4; padding: 10px; vertical-align: top;"><strong>Mouse/Touchpad</strong></td>
+                <td style="border: 1px solid #90cdf4; padding: 10px; vertical-align: top;">
+                    <strong>Cues Showing Component Status:</strong>
+                    <ul>
+                        <li>When hovering over a button, the background of said buttons is highlighted to signify it has been selected</li>
+                        <li>When mouse is moved, button returns to normal color</li>
+                        <li>When clicked, the arrow in the menu button changes direction, reiterating whether the dropdown menu is being selected</li>
+                        <li>Buttons in the dropdown menu also become highlighted when the mouse is over these buttons</li>
+                        <li>This additionally applied to the submenu</li>
+                        <li>When a button is selected (and clicking on it would result in a new tab being opened), the URL of said tab is displayed in a small box in the bottom left hand corner of the website (ex: https://www.uber.com/us/en/impact/)</li>
+                    </ul>
+                </td>
+                <td style="border: 1px solid #90cdf4; padding: 10px; vertical-align: top;">
+                    <strong>Cues Showing Component Status:</strong>
+                    <ul>
+                        <li>When hovering over a button, the background of said buttons is highlighted to signify it has been selected</li>
+                        <li>Additionally, the icons within the button (ex: "...", the bell icon, or house icon) grow slightly in size, reiterating that a button is being selected</li>
+                        <li>Important to note that when a button is "highlighted", the background color changes depending on what color the original button is</li>
+                        <li>Some websites/UIUXs use the same highlight color (ex: grey), regardless of button color</li>
+                        <li>Slack actually changes the shade of the button to a lighter shade when the mouse is hovering over it</li>
+                        <li>Ex: a purple button becomes a lighter shade of purple, a black button becomes grey, as opposed to everything just becoming grey</li>
+                    </ul>
+                </td>
+                <td style="border: 1px solid #90cdf4; padding: 10px; vertical-align: top;">
+                    <strong>Cues Showing Component Status:</strong>
+                    <ul>
+                        <li>When hovering over buttons, the background color does not change</li>
+                        <li>There additionally is no change in size of text, icon, or any other indicator that a button is being selected</li>
+                        <li>When the mouse hovers over a button that has a sub menu, an arrow icon suddenly appears to indicate that if clicked, a hidden sub menu will appear</li>
+                        <li>Once clicked, the arrow changes direction, but again is only shown if the mouse remains hovered over it</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #90cdf4; padding: 10px; vertical-align: top;"><strong>Keyboard</strong></td>
+                <td style="border: 1px solid #90cdf4; padding: 10px; vertical-align: top;">
+                    <strong>Cues Showing Component Status:</strong>
+                    <ul>
+                        <li>For main buttons, when using keys to navigate to primary buttons, a blue box is used to show the component status (ie: whether it has been selected of not)</li>
+                        <li>The sub menu reverts back to previous principles of the background of the button being highlighted when selected</li>
+                        <li>In terms of focus order, only main buttons can be navigated using the tab/tab+shift keys</li>
+                        <li>Arrow keys are reserved for submenus, and buttons lower on the hierarchy</li>
+                        <li>Up and down arrows can also be used for scrolling through the web page</li>
+                    </ul>
+                </td>
+                <td style="border: 1px solid #90cdf4; padding: 10px; vertical-align: top;">
+                    <strong>Cues Showing Component Status:</strong>
+                    <ul>
+                        <li>When using keys to navigate, a white box is created when a button is selected</li>
+                        <li>Interestingly, the button does not change shades when it is going to be selected. It is only when the return key is pressed and the button is "clicked" that the color of the button changes</li>
+                        <li>Additionally, when other buttons are being selected (namely, ones with the darker background), sometimes the box that appears is blue. This varies simply depends on focus order (how high on the hierarchy the button is), as well as visuals of the background</li>
+                    </ul>
+                </td>
+                <td style="border: 1px solid #90cdf4; padding: 10px; vertical-align: top;">
+                    <strong>Cues Showing Component Status:</strong>
+                    <ul>
+                        <li>When a button is "selected" using a key, the background of the button becomes blue</li>
+                        <li>This works because the color scheme is uniform, and the blue provides a strong contrast to the otherwise grey color scheme</li>
+                        <li>The icons on each button (which are by default blue), turn to grey when the button is selected</li>
+                        <li>This is a nice touch as the buttons become perfect inverses of themselves when selected</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="content-area">
+        <div class="section-title">State Model:</div>
+        <p>The state model illustrates the different states a dropdown menu can be in and the transitions between these states. The diagrams below show both the current standard mouse/trackpad and keyboard implementations.</p>
         
-        <p>You can add additional paragraphs, lists, images, and other HTML elements here to structure your content as needed.</p>
+        <div class="image-container" style="display: flex; flex-direction: column; gap: 20px;">
+            <div class="image-box" style="width: 100%;">
+                <img src="imagetwo.png" alt="Standard Dropdown Menu State Model" style="width: 100%; height: auto;" />
+                <div class="image-caption">Figure 1: Mouse/Trackpad</div>
+            </div>
+            <div class="image-box" style="width: 100%;">
+                <img src="imageone.png" alt="Accessible Dropdown Menu State Model" style="width: 100%; height: auto;" />
+                <div class="image-caption">Figure 2: Keyboard</div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="content-area">
+        <div class="section-title">Component Redesign State Model:</div>
+        <p>Content for the component redesign state model section goes here.</p>
+        
+        <div class="image-container" style="display: flex; flex-direction: column; gap: 20px;">
+            <div class="image-box" style="width: 100%;">
+                <img src="image3.png" alt="Updated Model: Mouse/Trackpad" style="width: 100%; height: auto;" />
+                <div class="image-caption">Updated Accessible Model: Mouse/Trackpad</div>
+            </div>
+            <div class="image-box" style="width: 100%;">
+                <img src="image4.png" alt="Updated Model: Keyboard" style="width: 100%; height: auto;" />
+                <div class="image-caption">Updated Accessible Model: Keyboard</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-area">
+        <div class="section-title">Email App: Redesigned for Accessibility:</div>
+        <p>Content for the email app redesign section goes here.</p>
+        
+        <div class="image-container" style="display: flex; flex-direction: column; gap: 20px;">
+            <div class="image-box" style="width: 100%;">
+                <img src="image5.png" alt="Redesigned Email App: Mouse/Trackpad" style="width: 100%; height: auto;" />
+                <div class="image-caption">Original EMmail App</div>
+            </div>
+            <div class="image-box" style="width: 100%;">
+                <img src="image6.png" alt="Redesigned Email App: Keyboard" style="width: 100%; height: auto;" />
+                <div class="image-caption">Redesigned Email App: More Accessible Design</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-area">
+        <div class="section-title">Reflection:</div>
+        <ul>
+            <li>The components I observed did well in terms of keyboard accessibility, allowing for users to easily navigate using both the arrow keys and the tab/return key.</li>
+            
+            <li>Standard dropdowns also usually have a consistent visual structure that helps users with cognitive disabilities. This is usually enhanced by high contrast in color/font sizing, as well as small, succinct blocks of highly descriptive text.</li>
+            
+            <li>Many dropdown implementations fail to provide proper announcements/visuals for state changes. For example, the default Mail app on the Apple IOS operating system lacks any sort of distinction when the mouse is hovering over a submenu option. This can lead to difficulty in understanding what will occur when the trackpad is clicked.</li>
+            
+            <li>I accounted for this in my updated design by ensuring that when the mouse is hovering over a button, the background of the button changes color, ensuring that the user understands this button is being selected.</li>
+            
+            <li>The change I made solved a mismatch for people who have visual impairments and have difficulty navigating computers with just the cursor. Previously, navigating a dropdown menu may have been difficult as it was unclear which button would be "selected" when the mouse was hovering over it now; now, because the background of these buttons change color, people with eyesight issues and other visual impairments will be able to determine which submenu item is being selected.</li>
+            
+            <li>Based on Parts 1 and 2, the ability to navigate through dropdown menus with just the keyboard could positively impact users with fine motor impairments who are unable to use a mouse.</li>
+            
+            <li>Conversely, users with visual and cognitive impairments who are unable to see or immediately comprehend what they are seeing are negatively impacted by the lack of clear visual feedback when hovering over a submenu option in the Mail App.</li>
+            
+            <li>Mouse users are most commonly prioritized, given this is the most popular and common way to navigate components. This impacts user experience because those who have mismatched experiences and are unable to use a mouse must rely on secondary, alternative navigation techniques that are often neglected, underdeveloped, and hard to use.</li>
+        </ul>
     </div>
 </body>
 </html>
