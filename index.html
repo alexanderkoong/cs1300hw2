@@ -287,9 +287,17 @@ This design is not particularly intuitive as it doesn't allow for clear navigati
                 <img src="image3.png" alt="Updated Model: Mouse/Trackpad" style="width: 100%; height: auto;" />
                 <div class="image-caption">Updated Accessible Model: Mouse/Trackpad</div>
             </div>
-            <div class="image-box" style="width: 100%;">
-                <img src="image4.png" alt="Updated Model: Keyboard" style="width: 100%; height: auto;" />
-                <div class="image-caption">Updated Accessible Model: Keyboard</div>
+            <div class="image-box" style="width: 100%; text-align: left; margin: 0 auto;">
+                <img src="image4.png" alt="Updated Model: Keyboard" style="width: 100%; height: auto; display: block; margin: 0 auto;" />
+                <div class="image-caption" style="text-align: center;">Updated Accessible Model: Keyboard</div>
+                <div class="notes">
+                    <h4>Notes:</h4>
+                    <ul>
+                        <li>This diagram is specifically made for a submenu with three options (the three purple options). Each of the three interactions in purple are essentially duplicates and can be scaled to as many menu options out there.</li>
+                        <li>Additionally, my redesign incorporates a new feature that when the mouse is hovering over a submenu selection item, the background of the submenu option is changed to a lighter color. This allows the user to better understand what submenu option is being selected.</li>
+                        <li>This affects accessibility in people with visual impairments and cognitive disabilities, as they will be able to better understand what submenu option is being selected. This would be less efficient for mouse users as quickly scrolling through all menu options could be confusing/rapidly highlight a variety of boxes, but would be much easier to navigate for slow moving users who have disabilities.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -301,11 +309,11 @@ This design is not particularly intuitive as it doesn't allow for clear navigati
         <div class="image-container" style="display: flex; flex-direction: column; gap: 20px;">
             <div class="image-box" style="width: 100%;">
                 <img src="image5.png" alt="Redesigned Email App: Mouse/Trackpad" style="width: 100%; height: auto;" />
-                <div class="image-caption">Original EMmail App</div>
+                <div class="image-caption">Figure 1: Original Email App</div>
             </div>
             <div class="image-box" style="width: 100%;">
                 <img src="image6.png" alt="Redesigned Email App: Keyboard" style="width: 100%; height: auto;" />
-                <div class="image-caption">Redesigned Email App: More Accessible Design</div>
+                <div class="image-caption">Figure 2: Redesigned More Accessible Email App</div>
             </div>
         </div>
     </div>
@@ -313,7 +321,7 @@ This design is not particularly intuitive as it doesn't allow for clear navigati
     <div class="content-area">
         <div class="section-title">Reflection:</div>
         <ul>
-            <li>The components I observed did well in terms of keyboard accessibility, allowing for users to easily navigate using both the arrow keys and the tab/return key.</li>
+            <li>The components I observed (primary Uber and Slack) did well in terms of keyboard accessibility, allowing for users to easily navigate using both the arrow keys and the tab/return key. The Mail App was not as strong in this regard as the keyboard navigation was far less intuitive.</li>
             
             <li>Standard dropdowns also usually have a consistent visual structure that helps users with cognitive disabilities. This is usually enhanced by high contrast in color/font sizing, as well as small, succinct blocks of highly descriptive text.</li>
             
@@ -321,7 +329,7 @@ This design is not particularly intuitive as it doesn't allow for clear navigati
             
             <li>I accounted for this in my updated design by ensuring that when the mouse is hovering over a button, the background of the button changes color, ensuring that the user understands this button is being selected.</li>
             
-            <li>The change I made solved a mismatch for people who have visual impairments and have difficulty navigating computers with just the cursor. Previously, navigating a dropdown menu may have been difficult as it was unclear which button would be "selected" when the mouse was hovering over it now; now, because the background of these buttons change color, people with eyesight issues and other visual impairments will be able to determine which submenu item is being selected.</li>
+            <li>As per the video's definition of mismatched experiences, the change I made solved a mismatch for people who have visual impairments and have difficulty navigating computers with just the cursor. Previously, navigating a dropdown menu may have been difficult as it was unclear which button would be "selected" when the mouse was hovering over it now; now, because the background of these buttons change color, people with eyesight issues and other visual impairments will be able to determine which submenu item is being selected.</li>
             
             <li>Based on Parts 1 and 2, the ability to navigate through dropdown menus with just the keyboard could positively impact users with fine motor impairments who are unable to use a mouse.</li>
             
